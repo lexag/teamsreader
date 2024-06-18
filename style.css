@@ -1,31 +1,50 @@
 body {
-	background-color: rgb(15, 15, 25);
+	--bgd_col: rgb(15, 15, 25);
+	--txt_col: aliceblue;
+	--sep_col: rgb(60, 60, 100);
+
+	background-color: var(--bgd_col);
 	font-family: monospace;
+	overflow-x: hidden;
 }
 
 p {
-	color: aliceblue;
+	color: var(--txt_col);
 	margin: 2px;
 }
 
+
 .author-separator {
 	height: 15px;
-	color: gray
+	color: var(--txt_col);
+	font-style: italic;
 }
 
 .author-separator-line {
 	height: 1px;
-	background-color: rgb(60, 60, 100);;
+	background-color: var(--sep_col);
 }
 
 
 .time-separator {
 	margin-top: 60px;
 	height: 15px;
-	color: gray
+	color: var(--txt_col)
 }
 
 .time-separator-line {
 	height: 2px;
-	background-color: gray;
+	background-color: var(--sep_col);
+}
+
+.section {
+	margin: 5px;
+	padding: 5px;
+	color: var(--txt_col);
+}
+	
+.bar {
+	border: 1px solid var(--sep_col);
+	display: flex;
+	flex-direction: row;
 }

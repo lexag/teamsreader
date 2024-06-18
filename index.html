@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style.css">
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-	<head>
-		<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+
 <body>
-	<input type="file" id="myFile" name="filename">
+	<div class="filter bar">
+		<div class="section"><input type="file" id="myFile" name="filename"></div>
+		<div class="section"><input id="searchbar" type="text" placeholder="Search.."></div>
+		<div class="section">
+			<input id="startdate" type="date" value="2021-10-12" min="2021-10-12" max="2025-01-01">
+			Single day:<input type="checkbox" id="oneday">
+			<button onclick="nudgeDates(-1)">Yesterday</button>
+			<button onclick="nudgeDates(1)">Tomorrow</button>
+		</div>
+		<div class="section"><button onclick="applyFilter()">Apply Filter</button></div>
+	</div>
+	<div class="message-space"></div>
 </body>
 <script src="main.js"></script>
 
